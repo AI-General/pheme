@@ -112,7 +112,7 @@ class PhemeClient():
         labels = [str(lbl) for lbl in semantic_prompt]
         labels = self.collater([labels])[:, :-1]
         decoder_input_ids = labels.to(device).long()
-        logging.debug(f"decoder_input_ids: {decoder_input_ids}")
+        # logging.debug(f"decoder_input_ids: {decoder_input_ids}")
 
         counts = 1E10
         while (counts > MAX_TOKEN_COUNT):
